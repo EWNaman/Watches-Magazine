@@ -147,13 +147,18 @@ function displayData(page) {
                 </div>
                 <div class="details">
                     <div class="source-head detail">${item.Source ? item.Source.slice(0, 30) : ''}</div>
-                    <div class="title-head detail"> Title: ${item.Title ? item.Title.slice(0, 30) : ''}</div>
-                    <div class="date-head detail"> Date: ${item.Date ? item.Date : ''}</div>
-                    <div class="other-head detail"> Place: ${item.Place ? item.Place : ''}</div>
-                    <div class="other-head detail"> Type of Document: ${item.TypeOfDocument ? item.TypeOfDocument : ''}</div>
-                    <div class="other-head detail"> Type of Media: ${item.TypeOfMedia ? item.TypeOfMedia : ''}</div>
-                    <div class="other-head detail"> Number of Pages: ${item.NumberOfPages ? item.NumberOfPages : ''}</div>
-                    <div class="other-head detail"> Licence: ${item.Licence ? item.Licence.slice(0, 30) : ''}</div>
+                    <div class="title-head detail"> ${item.Title ? item.Title.slice(0, 30) : ''}</div>
+                    <div class="date-head detail-head">
+                        <div class="left-detail"><img src="https://ewnaman.github.io/Watches-Magazine/calender.png" alt="Date" class="item"><span class="item-text"> ${item.Date ? item.Date : ''} </span></div>
+                        <div class="right-detail"><img src="https://ewnaman.github.io/Watches-Magazine/location.png" alt="Place" class="item"><span class="item-text"> ${item.Place ? item.Place : ''} </span></div>
+                    </div>
+                    <div class="other-head detail-head">
+                        <div class="left-detail"><img src="https://ewnaman.github.io/Watches-Magazine/document.png" alt="Type of Document" class="item"><span class="item-text"> ${item.TypeOfDocument ? item.TypeOfDocument : ''} </span></div>
+                        <div class="right-detail"><img src="https://ewnaman.github.io/Watches-Magazine/book.png" alt="Number of Pages" class="item"><span class="item-text"> ${item.NumberOfPages ? item.NumberOfPages + ' Pages' : ''} </span></div>
+                    </div>
+                    <div class="other-head detail">
+                        <img src="https://ewnaman.github.io/Watches-Magazine/licence.png" alt="Licence" class="item"> ${item.Licence ? item.Licence.slice(0, 30) : ''}
+                    </div>
                 </div>
             </a>
         `;
