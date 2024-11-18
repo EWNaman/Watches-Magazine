@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.content {
+    display: none;
+    /* Initially hide the container */
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+#logoutButton {
+    display: none;
+    position: fixed;
+    top: 85px;
+    /* Distance from the top of the screen */
+    right: 45px;
+    /* Distance from the right of the screen */
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Red color for logout button */
+    border: 2px solid #f44336;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#logoutButton:hover {
+    outline: none;
+    background-color: #c04037;
+    border-color: #c04037;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+#logoutButton:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Container for centering the form */
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Heading */
+.login-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input fields styling */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #4CAF50;
+    background-color: #e8f7e5;
+    outline: none;
+}
+
+.button.login {
+    padding: 7px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button.login:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.button.login:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button.login {
+        font-size: 1rem;
+    }
+}

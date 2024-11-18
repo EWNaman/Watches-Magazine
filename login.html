@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <link rel="stylesheet" href="auth.css">
+  <!-- Firebase SDK (Modular) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    // Firebase Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBXIM7RcvjeoimaFARfmJ1NPkfM-ucLx70",
+      authDomain: "watches-magazine.firebaseapp.com",
+      databaseURL: "https://watches-magazine-default-rtdb.firebaseio.com",
+      projectId: "watches-magazine",
+      storageBucket: "watches-magazine.firebasestorage.app",
+      messagingSenderId: "119718487868",
+      appId: "1:119718487868:web:c231ad442a273d584ca039",
+      measurementId: "G-WTTT7ZJWJV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Handle Login Function
+    window.handleLogin = function () {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          console.log("Logged in as:", userCredential.user);
+          // Redirect to index page after login
+          window.location.href = 'home.html';
+        })
+        .catch((error) => {
+          console.error("Error logging in:", error);
+        });
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="login">
+    <div class="login-container">
+      <h1>Login to Watches Magazine</h1>
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button onclick="handleLogin()" id="login" class="login button">Login</button>
+    </div>
+  </div>
+</body>
+
+</html>

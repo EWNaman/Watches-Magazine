@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watches Magazine</title>
+    <script type="module" src="auth.js"></script>
+
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://ewnaman.github.io/Watches-Magazine/tableau.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+    <button id="logoutButton" style="display: none;" onclick="handleLogout()">Logout</button>
+        <h1 class="heading-title">Watches Magazine</h1>
+        <!-- Filters Section -->
+        <div id="filters">
+            <div class="filter-group">
+                <label for="source-filter" class="ddl-label">Source</label>
+                <select id="source-filter" class="filter-input" title="Filter by Source">
+                    <option value="">Source</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="typeOfDocument-filter" class="ddl-label">Type of Document</label>
+                <select id="typeOfDocument-filter" class="filter-input" title="Filter by Type of Document">
+                    <option value="">Type of Document</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="date-filter" class="ddl-label">Year</label>
+                <select id="date-filter" class="filter-input" title="Filter by Date">
+                    <option value="">Year</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="place-filter" class="ddl-label">Location</label>
+                <select id="place-filter" class="filter-input" title="Filter by Place">
+                    <option value="">Location</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="typeOfMedia-filter" class="ddl-label">Type of Media</label>
+                <select id="typeOfMedia-filter" class="filter-input" title="Filter by Type of Media">
+                    <option value="">Type of Media</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="language-filter" class="ddl-label">Language</label>
+                <select id="language-filter" class="filter-input" title="Filter by Language">
+                    <option value="">Language</option>
+                    <!-- Add options here -->
+                </select>
+            </div>
+
+            <!-- Filter Action Buttons -->
+            <div class="filter-buttons">
+                <button id="apply-filter-btn" class="filter-button">Apply</button>
+                <button id="reset-filter-btn" class="filter-button">Reset</button>
+            </div>
+        </div>
+
+        <!-- Data Display Section -->
+        <div id="data-container" class="data-container"></div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <button id="logoutButton" style="display: none;" onclick="handleLogout()">Logout</button>
+
+    <footer class="footer">
+        <div class="copyright" href="#">
+            &copy; <span id="currentYear"></span> All rights reserved. <br />
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
